@@ -40,8 +40,7 @@ async def tea_handler(
         name = data.get("magnet")
 
     await callback.message.answer_photo(
-        photo=tea_photo,
-        caption=text, reply_markup=tea_kb(price=price, name=name)
+        photo=tea_photo, caption=text, reply_markup=tea_kb(price=price, name=name)
     )
 
 

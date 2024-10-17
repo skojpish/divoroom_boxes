@@ -15,6 +15,12 @@ REDIS_PORT = getenv("REDIS_PORT")
 
 REDIS_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/0"
 
+WEB_SERVER_HOST = "127.0.0.1"
+WEB_SERVER_PORT = 8080
+
+WEBHOOK_PATH = "/webhook_boxes"
+BASE_WEBHOOK_URL = "https://divoroombot.ru"
+
 bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
 
 redis_instance = Redis.from_url(REDIS_URL)

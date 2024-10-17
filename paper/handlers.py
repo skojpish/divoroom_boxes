@@ -17,7 +17,9 @@ async def cards_in_stock(callback: CallbackQuery):
 
     text = cards_in_stock_text()
 
-    await callback.message.answer_photo(photo=cards_photo, caption=text, reply_markup=cards_in_stock_kb())
+    await callback.message.answer_photo(
+        photo=cards_photo, caption=text, reply_markup=cards_in_stock_kb()
+    )
 
 
 @router.callback_query(CardsInStockCF.filter())
