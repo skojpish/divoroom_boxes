@@ -18,7 +18,7 @@ REDIS_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/0"
 WEB_SERVER_HOST = "127.0.0.1"
 WEB_SERVER_PORT = 8080
 
-WEBHOOK_PATH = "/webhook"
+WEBHOOK_PATH = "/webhook-1"
 BASE_WEBHOOK_URL = "https://divoroombot.ru"
 
 bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
