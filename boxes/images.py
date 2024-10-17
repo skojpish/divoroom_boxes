@@ -1,0 +1,3 @@
+final_photo = (
+    "AgACAgIAAxkBAAIBC2cRd91TwDAEI_v9AAGasBw1uqK4RAACwuIxG5c9kUitQk_3D2LDyAEAAwIAA3kAAzYE"
+)
