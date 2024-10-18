@@ -5,7 +5,7 @@ from aiogram.fsm.context import FSMContext
 from boxes.fsm import UserInfoState
 from boxes.keyboards import boxes_info_kb
 from boxes.messages import box_info_text, final_text, order_text, user_info_text
-from boxes.images import final_photo
+from boxes.images import final_photo, box_info_photo
 from commands.callback_factories import BoxesCF
 from food.callback_factories import CandleCF
 from settings import MASTER_ID, bot
@@ -23,7 +23,7 @@ async def all_boxes_info(
 
     text = box_info_text()
 
-    await callback.message.answer(text=text, reply_markup=boxes_info_kb())
+    await callback.message.answer_photo(photo=box_info_photo, caption=text, reply_markup=boxes_info_kb())
 
 
 @router.callback_query(CandleCF.filter())

@@ -14,7 +14,7 @@ chocolate_photo = (
 candle_photos = [
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAP7ZxF3WWM8LPNJCilzFq7IO6zAiZ8AArfiMRuXPZFI1K0mTAy5s6wBAAMCAAN5AAM2BA",
+        media="AgACAgIAAxkBAAP_ZxF3aAo7ybY25Cz5nCtiSHCvBeAAArniMRuXPZFIi14cFjzvigwBAAMCAAN5AAM2BA",
     ),
     InputMediaPhoto(
         type="photo",
@@ -22,6 +22,6 @@ candle_photos = [
     ),
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAP_ZxF3aAo7ybY25Cz5nCtiSHCvBeAAArniMRuXPZFIi14cFjzvigwBAAMCAAN5AAM2BA",
+        media="AgACAgIAAxkBAAP7ZxF3WWM8LPNJCilzFq7IO6zAiZ8AArfiMRuXPZFI1K0mTAy5s6wBAAMCAAN5AAM2BA",
     ),
 ]
