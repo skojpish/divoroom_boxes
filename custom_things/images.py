@@ -1,29 +1,28 @@
 from aiogram.types import InputMediaPhoto
 
 
-magnets_photos = [
-    InputMediaPhoto(
-        type="photo",
-        media="AgACAgIAAxkBAAIBAWcRd6AJwyYCLmaAhJOeb8x7iHT6AAK74jEblz2RSN4E5zR_nyIDAQADAgADeQADNgQ",
-    ),  #  Ушки
-    InputMediaPhoto(
-        type="photo",
-        media="AgACAgIAAxkBAAIBA2cRd6ma7og8YO5s197ZesEUhsrhAAK84jEblz2RSCYtEKfGMWa7AQADAgADeQADNgQ",
-    ),  # Спим
-]
+magnets_photo = "AgACAgIAAxkBAAIIRmdQtPUOdBXX2LFk90oZL2k2Z58pAAIV5DEbQ0-ISpCbF5tjRllTAQADAgADeQADNgQ"
 
 
 shoppers_photos = [
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIBBWcRd7KGqs1Mj3Cs67eMhzRCmlebAAK94jEblz2RSJEvVOBQY_EcAQADAgADeQADNgQ",
-    ),  #  Переживем
+        media="AgACAgIAAxkBAAIISGdQtQFL0jENQ_pd5BN-HHOEdXF1AAIW5DEbQ0-ISkyaQ4Ilo3KbAQADAgADeQADNgQ",
+    ),  #  Теплые
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIBB2cRd8Q_TSy_6Mtr4N4qfrWdk9W8AALA4jEblz2RSBbD8gAB_TdevwEAAwIAA3kAAzYE",
-    ),  # Чаю
+        media="AgACAgIAAxkBAAIISmdQtQe3ysRQvZ2OIUgR_2YIIoR-AAIX5DEbQ0-ISgkqLIUstx87AQADAgADeQADNgQ",
+    ),  # трудные
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIBCWcRd87upnDQaIpdwMoAAR4a_HrmxwACweIxG5c9kUgwRhp4YFh4YAEAAwIAA3kAAzYE",
+        media="AgACAgIAAxkBAAIITGdQtQ-Aem3mdb0rzDgPJp425ZVtAAIZ5DEbQ0-ISganYfmUKQ2fAQADAgADeQADNgQ",
+    ),  # переживем
+    InputMediaPhoto(
+        type="photo",
+        media="AgACAgIAAxkBAAIITmdQtRccWvaN2ufRouB3WkRsHUq_AAIa5DEbQ0-ISjHkY92LXbwkAQADAgADeQADNgQ",
+    ),  # чай
+    InputMediaPhoto(
+        type="photo",
+        media="AgACAgIAAxkBAAIIUGdQtR1oC23pGIERUL2d9Tn3zWJGAAIb5DEbQ0-ISkUCxQSPSmvvAQADAgADeQADNgQ",
     ),  # Добро
 ]

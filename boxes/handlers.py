@@ -1,13 +1,19 @@
-from aiogram import Router
+from aiogram import F, Router
 from aiogram.types import CallbackQuery, Message
 from aiogram.fsm.context import FSMContext
 
 from boxes.fsm import UserInfoState
 from boxes.keyboards import boxes_info_kb
 from boxes.messages import box_info_text, final_text, order_text, user_info_text
-from boxes.images import final_photo, box_info_photo
+from boxes.images import (
+    final_photo,
+    box_info_photo_1,
+    box_info_photo_2,
+    box_info_photo_3,
+)
 from commands.callback_factories import BoxesCF
-from food.callback_factories import CandleCF
+from custom_things.callback_factories import CustomMagnetsCF, CustomShoppersCF
+from paper.callback_factories import PinCF
 from settings import MASTER_ID, bot
 
 
@@ -21,21 +27,42 @@ async def all_boxes_info(
     await callback.answer()
     await state.update_data(box_price=callback_data.price)
 
-    text = box_info_text()
+    if callback_data.price == 1990:
+        box_photo = box_info_photo_1
+    elif callback_data.price == 2990:
+        box_photo = box_info_photo_2
+    elif callback_data.price == 4990:
+        box_photo = box_info_photo_3
 
-    await callback.message.answer_photo(photo=box_info_photo, caption=text, reply_markup=boxes_info_kb())
+    text = box_info_text(price=callback_data.price)
+
+    await callback.message.answer_photo(
+        photo=box_photo, caption=text, reply_markup=boxes_info_kb()
+    )
 
 
-@router.callback_query(CandleCF.filter())
+@router.callback_query(PinCF.filter(F.box_price == 1990))
+@router.callback_query(CustomMagnetsCF.filter(F.box_price == 2990))
+@router.callback_query(CustomShoppersCF.filter())
 async def user_info_handler(
-    callback: CallbackQuery, callback_data: CandleCF, state: FSMContext
+    callback: CallbackQuery,
+    callback_data: PinCF | CustomMagnetsCF | CustomShoppersCF,
+    state: FSMContext,
 ):
     await callback.answer()
-    await state.update_data(candle=callback_data.name)
 
     text = user_info_text()
 
     await state.set_state(UserInfoState.text)
+
+    price = callback_data.box_price
+
+    if price == 1990:
+        await state.update_data(pin=callback_data.name)
+    elif price == 2990:
+        await state.update_data(magnet=callback_data.name)
+    else:
+        await state.update_data(shopper=callback_data.name)
 
     await callback.message.answer(text=text)
 

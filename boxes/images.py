@@ -1,22 +1,24 @@
 from aiogram.types import InputMediaPhoto
 
 
-final_photo = "AgACAgIAAxkBAAIBC2cRd91TwDAEI_v9AAGasBw1uqK4RAACwuIxG5c9kUitQk_3D2LDyAEAAwIAA3kAAzYE"
+final_photo = "AgACAgIAAxkBAAIIUmdQtSfCQnteh4h_whJjWXo9TQnrAAIc5DEbQ0-ISlBN8SQ5g278AQADAgADeQADNgQ"
 
 start_photos = [
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIB-GcSbGFPZtCvgcREpSR8BYXLl4ooAAKn4DEb04ORSGi-XUCHke4sAQADAgADeQADNgQ",
+        media="AgACAgIAAxkBAAIIMWdQtDqXnnE3V3tv-75UfggcHyfuAAIJ5DEbQ0-ISrrzov3FjySWAQADAgADeQADNgQ",
     ),
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIB-mcSbGqtjaU5LmS3zUCrXM3FZIwbAAKo4DEb04ORSMQVcx0vfH9UAQADAgADeQADNgQ",
+        media="AgACAgIAAxkBAAIINGdQtIPzhv6sOjWMs-iBK8LGIlJ1AAIM5DEbQ0-ISmwkg0ImjwUoAQADAgADeQADNgQ",
     ),
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIB_GcSbHI0n9cdhy-f9_WvGO-9eXQ5AAKp4DEb04ORSKlfHv2EwiuZAQADAgADeQADNgQ",
+        media="AgACAgIAAxkBAAIINmdQtIi6Cbtn2bs5cX6Rs0kyn95KAAIN5DEbQ0-ISu0x3_CTFwPSAQADAgADeQADNgQ",
     ),
 ]
 
 
-box_info_photo = "AgACAgIAAxkBAAIB_mcSbH-ciwIrz8k83knoGw0fQEHHAAKq4DEb04ORSEU4-I19SjJeAQADAgADeQADNgQ"
+box_info_photo_1 = "AgACAgIAAxkBAAIIOGdQtKWwO3fcjEldOEetMqt-q-EEAAIO5DEbQ0-ISlzCN6vvMhbyAQADAgADeQADNgQ"
+box_info_photo_2 = "AgACAgIAAxkBAAIIOmdQtLC_GRc9VALef8HmK2XCs6jnAAIP5DEbQ0-ISqnYYWabJovzAQADAgADeQADNgQ"
+box_info_photo_3 = "AgACAgIAAxkBAAIIPGdQtLVTmwaUvdW7MwHoSkoI1MSfAAIQ5DEbQ0-ISsgyr9-bv76yAQADAgADeQADNgQ"

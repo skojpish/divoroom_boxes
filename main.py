@@ -7,15 +7,12 @@ from commands.handlers import router as commands_router
 from boxes.handlers import router as boxes_router
 from paper.handlers import router as cards_router
 from custom_things.handlers import router as custom_router
-from food.handlers import router as food_router
 
 
 async def main() -> None:
     dp = Dispatcher(storage=redis_storage)
 
-    dp.include_routers(
-        commands_router, boxes_router, cards_router, custom_router, food_router
-    )
+    dp.include_routers(commands_router, boxes_router, cards_router, custom_router)
 
     try:
         logger.info("---BOT STARTING---")

@@ -1,23 +1,18 @@
 from aiogram.types import InputMediaPhoto
 
 
-cards_photo = (
-    "AgACAgIAAxkBAAPvZxF3BHfdJKmAcJHIRfiCAoLZwYEAArDiMRuXPZFI0yb7H4tKhrgBAAMCAAN5AAM2BA"
-)
+cards_photo = "AgACAgIAAxkBAAIIPmdQtNlfsWRZ36882-h_3DENsJtpAAIR5DEbQ0-IShgl1XJ4VVtDAQADAgADeQADNgQ"
 
 
-hedgehog_photos = [
+stickers_color_photos = [
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAPzZxF3RI29MyXc0GAIKZxGuWTrkA8AArLiMRuXPZFIfGqjvL0ktJIBAAMCAAN5AAM2BA",
-    ),  # Два ежа ...
+        media="AgACAgIAAxkBAAIIQGdQtODIxpwWSjXFrb0hOU0hXINtAAIS5DEbQ0-IStYOEk3B3658AQADAgADeQADNgQ",
+    ),
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAPxZxF3Pw4LbR_vFJfhj6FamdBOy9IAArHiMRuXPZFIww_joZn2zgsBAAMCAAN5AAM2BA",
-    ),  # Ты пушистей
+        media="AgACAgIAAxkBAAIIQmdQtORg9KTctmf3d8nZvqKdS-ulAAIT5DEbQ0-ISg-H732QkLg-AQADAgADeQADNgQ",
+    ),
 ]
 
-
-stickers_color_photo = (
-    "AgACAgIAAxkBAAP1ZxF3S_2_QCh6p88S7NQuvawYyPsAArPiMRuXPZFIM7yR8aQ9oaIBAAMCAAN5AAM2BA"
-)
+pin_photo = "AgACAgIAAxkBAAIIRGdQtO3DdB-zO7IUBKL-WWkBTbPBAAIU5DEbQ0-ISslXG0O06UcAAQEAAwIAA3kAAzYE"

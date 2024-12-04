@@ -5,10 +5,10 @@ class CardsInStockCF(CallbackData, prefix="card"):
     name: str
 
 
-class HedgehogCF(CallbackData, prefix="hc"):
-    name: str
-
-
 class StickersColorCF(CallbackData, prefix="sc"):
     color: str
+
+
+class PinCF(CallbackData, prefix="p"):
+    name: str
     box_price: int
