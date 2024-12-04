@@ -52,6 +52,5 @@ async def pin_handler(
     await callback.message.answer_photo(
         photo=pin_photo,
         caption=text,
-        reply_markup=pin_kb(price=data.get("box_price"),
-                            card=data.get("card")),
+        reply_markup=pin_kb(price=data.get("box_price"), card=data.get("card")),
     )

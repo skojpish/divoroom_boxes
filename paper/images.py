@@ -1,18 +1,22 @@
 from aiogram.types import InputMediaPhoto
 
 
-cards_photo = "AgACAgIAAxkBAAIIPmdQtNlfsWRZ36882-h_3DENsJtpAAIR5DEbQ0-IShgl1XJ4VVtDAQADAgADeQADNgQ"
+cards_photo = (
+    "AgACAgIAAxkBAAMTZ1DL2TvN1ynsVlBVLYrLQfREKmkAAhHkMRtDT4hK1P8KBfXBGq0BAAMCAAN5AAM2BA"
+)
 
 
 stickers_color_photos = [
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIIQGdQtODIxpwWSjXFrb0hOU0hXINtAAIS5DEbQ0-IStYOEk3B3658AQADAgADeQADNgQ",
+        media="AgACAgIAAxkBAAMVZ1DL8GAdAZt0qJnYHO1JQpB_nLIAAhLkMRtDT4hKydXLXjFIXnQBAAMCAAN5AAM2BA",
     ),
     InputMediaPhoto(
         type="photo",
-        media="AgACAgIAAxkBAAIIQmdQtORg9KTctmf3d8nZvqKdS-ulAAIT5DEbQ0-ISg-H732QkLg-AQADAgADeQADNgQ",
+        media="AgACAgIAAxkBAAMXZ1DL9BB-pj0IlQGktzipV9YTNnwAAhPkMRtDT4hKsVvZS4IEPmkBAAMCAAN5AAM2BA",
     ),
 ]
 
-pin_photo = "AgACAgIAAxkBAAIIRGdQtO3DdB-zO7IUBKL-WWkBTbPBAAIU5DEbQ0-ISslXG0O06UcAAQEAAwIAA3kAAzYE"
+pin_photo = (
+    "AgACAgIAAxkBAAMZZ1DL_T2IgbyNpZ5jErrDAzqX_KwAAhTkMRtDT4hKJp32Knd56bkBAAMCAAN5AAM2BA"
+)
