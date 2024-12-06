@@ -65,7 +65,7 @@ def order_text(
     text = (
         text + f"Ссылка: https://t.me/{username}"
         if username
-        else "У пользователя нет юзернейма, МДА УЖ 21 век на дворе"
+        else text + "У пользователя нет юзернейма, МДА УЖ 21 век на дворе"
     )
 
     return text
