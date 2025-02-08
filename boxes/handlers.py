@@ -3,8 +3,8 @@ from aiogram.types import CallbackQuery, Message
 from aiogram.fsm.context import FSMContext
 
 from boxes.fsm import UserInfoState
-from boxes.keyboards import boxes_info_kb
-from boxes.messages import box_info_text, final_text, order_text, user_info_text
+from boxes.keyboards import boxes_info_kb, choice_delivery_kb
+from boxes.messages import box_info_text, final_text, order_text, user_info_text, choice_delivery_text
 from boxes.images import (
     final_photo,
     box_info_photo_1,
@@ -21,6 +21,22 @@ router = Router()
 
 
 @router.callback_query(BoxesCF.filter())
+async def choice_of_delivery(callback: CallbackQuery, callback_data: BoxesCF, state: FSMContext):
+    await callback.answer()
+    text = choice_delivery_text()
+    await callback.message.answer(text, reply_markup=choice_delivery_kb())
+
+@router.callback_query(F.data == "sdek_delivery")
+async def sdek_delivery_handler(callback: CallbackQuery, state: FSMContext):
+    await callback.answer()
+
+    text = user_info_text()
+
+    await state.set_state(UserInfoState.text)
+
+    await callback.message.answer(text=text)
+
+
 async def all_boxes_info(
     callback: CallbackQuery, callback_data: BoxesCF, state: FSMContext
 ):
@@ -79,3 +95,16 @@ async def final_msg_handler(message: Message, state: FSMContext) -> None:
     await bot.send_message(chat_id=MASTER_ID, text=text)
 
     await state.clear()
+
+
+@router.callback_query(F.data == "self_delivery")
+async def self_delivery_handler(
+    callback: CallbackQuery
+):
+    await callback.answer()
+
+    text = final_text(callback.from_user.username)
+    await callback.message.answer_photo(photo=final_photo, caption=text)
+
+    text = order_text(callback.from_user.username)
+    await bot.send_message(chat_id=MASTER_ID, text=text)

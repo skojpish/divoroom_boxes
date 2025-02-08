@@ -4,7 +4,7 @@ from aiogram.fsm.context import FSMContext
 
 from commands.keyboards import menu_kb
 from commands.messages import start_message
-from boxes.images import start_photos
+from boxes.images import start_photo
 
 
 router = Router()
@@ -15,16 +15,14 @@ async def cmd_start(message: Message, state: FSMContext) -> None:
     await state.clear()
     await state.update_data(username=message.from_user.username)
     text = start_message()
-    await message.answer_media_group(media=start_photos)
-    await message.answer(text=text, reply_markup=menu_kb())
+    await message.answer_photo(photo=start_photo,caption=text, reply_markup=menu_kb())
 
 
 @router.callback_query(F.data == "back_to_menu")
 async def back_to_menu(callback: CallbackQuery) -> None:
     await callback.answer()
     text = start_message()
-    await callback.message.answer_media_group(media=start_photos)
-    await callback.message.answer(text=text, reply_markup=menu_kb())
+    await callback.message.answer_photo(photo=start_photo,caption=text, reply_markup=menu_kb())
 
 
 @router.message(F.photo)

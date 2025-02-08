@@ -2,23 +2,10 @@ from aiogram.types import InputMediaPhoto
 
 
 final_photo = (
-    "AgACAgIAAxkBAAMnZ1DMJnxuuRtSEN7AoFhFXvpzcPwAAhzkMRtDT4hKvU6unjtQFt8BAAMCAAN5AAM2BA"
+    "AgACAgIAAxkBAAMEZ6dUVZAwCzDlGD4nZ6M7PLotPr8AAvbxMRsdYEBJkRbpzV4d2UQBAAMCAAN5AAM2BA"
 )
 
-start_photos = [
-    InputMediaPhoto(
-        type="photo",
-        media="AgACAgIAAxkBAAMEZ1DK3mJPyNc0-odyjww466LHwHsAAgnkMRtDT4hK8iW6Bex0UgcBAAMCAAN5AAM2BA",
-    ),
-    InputMediaPhoto(
-        type="photo",
-        media="AgACAgIAAxkBAAMJZ1DLs4mylfn_Q21ZTGoP_xzp4twAAgzkMRtDT4hK6b0kHIP6wMsBAAMCAAN5AAM2BA",
-    ),
-    InputMediaPhoto(
-        type="photo",
-        media="AgACAgIAAxkBAAMLZ1DLuViyijsMvKhqt9fuLOnI4lEAAg3kMRtDT4hKari05NiFFq0BAAMCAAN5AAM2BA",
-    ),
-]
+start_photo = "AgACAgIAAxkBAAMCZ6dURJJhAudx9z2pQ-tNe75VDmYAAuvxMRsdYEBJG8fzFotXw_sBAAMCAAN5AAM2BA"
 
 
 box_info_photo_1 = (
